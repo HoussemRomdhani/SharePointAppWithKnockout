@@ -9,7 +9,11 @@
 <%-- The markup and script in the following Content element will be placed in the <head> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
-    <SharePoint:ScriptLink name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
+    <script type="text/javascript" src="../Scripts/knockout-3.1.0.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.js"></script>
+    <script type="text/javascript" src="../Scripts/repositories.js"></script>
+    <script type="text/javascript" src="../Scripts/utils.js"></script>
     <meta name="WebPartPageExpansion" content="full" />
 
     <!-- Add your CSS styles to the following file -->
@@ -21,17 +25,32 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Page Title
+    Browse Products
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
-
     <div>
-        <p id="message">
-            <!-- The following content will be replaced with the user name when you run the app - see App.js -->
-            initializing...
-        </p>
+        <div id="productsContainer" style="display:none">
+            <table border="1" cellspacing="0" cellpadding="5" width="95%">
+                <thead style="background-color: gray; color: white">
+                <th>Name</th>
+                <th>Category</th>
+                <th>Unit Price</th>
+                <th>In Stock</th>
+                <th>On Order</th>
+                </thead>
+                <tbody data-bind="foreach: products">
+                    <tr>
+                        <td data-bind="text: Title"></td>
+                        <td data-bind="text: CategoryTitle"></td>
+                        <td data-bind="text: UnitPrice"></td>
+                        <td data-bind="text: UnitsInStock"></td>
+                        <td data-bind="text: UnitsOnOrder"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </asp:Content>

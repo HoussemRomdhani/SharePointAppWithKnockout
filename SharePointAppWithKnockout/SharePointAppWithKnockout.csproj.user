@@ -3,5 +3,14 @@
   <PropertyGroup>
     <SharePointSiteUrl>https://houssemromdhani.sharepoint.com/sites/Demo0/</SharePointSiteUrl>
   </PropertyGroup>
-  <ProjectExtensions />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
+        <ProjectStore>
+          <AppInstanceId>91a7ebd2-1c9d-46d4-a3b9-3d6a12c3ae7f</AppInstanceId>
+          <AppInstancePackageModifiedTime>2017-09-27T08:35:46.0200374Z</AppInstancePackageModifiedTime>
+        </ProjectStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
