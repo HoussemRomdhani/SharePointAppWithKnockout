@@ -27,7 +27,12 @@
                 CategoryTitle: value.Category.Title,
                 UnitPrice: String.format("${0:N2}", value.UnitPrice),
                 UnitsInStock: value.UnitsInStock,
-                UnitsOnOrder: value.UnitsOnOrder
+                UnitsOnOrder: value.UnitsOnOrder,
+                editProduct: function (product) {
+                    var url = "ProductEdit.aspx?ProductId=" + product.Id;
+                    url = XYZ.UrlUtils.addStandardTokens(url);
+                    SP.Utilities.HttpUtility.navigateTo(url);
+                }
             }
             viewModel.products.push(product);
         });

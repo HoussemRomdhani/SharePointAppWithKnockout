@@ -24,7 +24,7 @@
     <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
 
     <!-- Add your JavaScript to the following file -->
-    <script type="text/javascript" src="../Scripts/App.js"></script>
+    <script type="text/javascript" src="../Scripts/ProductEdit.js"></script>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
@@ -35,31 +35,9 @@
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 
-    <div>
-        <div id="productsContainer" class="ms-font-l" style="display:none">
-            <table border="1" cellspacing="0" cellpadding="5" width="95%">
-                <thead class="ms-bgColor-themeSecondary ms-fontColor-white">
-                <th>Name</th>
-                <th>Category</th>
-                <th>Unit Price</th>
-                <th>In Stock</th>
-                <th>On Order</th>
-                <th></th>
-                </thead>
-                <tbody data-bind="foreach: products">
-                    <tr>
-                        <td data-bind="text: Title"></td>
-                        <td data-bind="text: CategoryTitle"></td>
-                        <td data-bind="text: UnitPrice"></td>
-                        <td data-bind="text: UnitsInStock"></td>
-                        <td data-bind="text: UnitsOnOrder"></td>
-                        <td>
-                            <a class="ms-Link editButton" data-bind="click: editProduct">Edit</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="ms-font-l">
+        <p id="message">
+        </p>
     </div>
 
 </asp:Content>

@@ -55,12 +55,14 @@
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{46226cd8-0732-4016-a263-38f1b0d7ee14}</SharePointProjectItemId>
     </None>
+    <Content Include="Pages\ProductEdit.aspx" />
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\App.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\knockout-3.1.0.js" />
+    <Content Include="Scripts\ProductEdit.js" />
     <Content Include="Scripts\repositories.js" />
     <Content Include="Scripts\utils.js" />
     <Content Include="Scripts\_references.js" />

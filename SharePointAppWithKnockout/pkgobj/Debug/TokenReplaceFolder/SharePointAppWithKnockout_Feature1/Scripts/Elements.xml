@@ -9,5 +9,6 @@
     <File Path="Scripts\knockout-3.1.0.js" Url="Scripts/knockout-3.1.0.js" ReplaceContent="TRUE" />
     <File Path="Scripts\repositories.js" Url="Scripts/repositories.js" ReplaceContent="TRUE" />
     <File Path="Scripts\utils.js" Url="Scripts/utils.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\ProductEdit.js" Url="Scripts/ProductEdit.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -3,6 +3,7 @@
   <ElementManifests>
     <ElementManifest Location="Pages\Elements.xml" />
     <ElementFile Location="Pages\Default.aspx" />
+    <ElementFile Location="Pages\ProductEdit.aspx" />
     <ElementManifest Location="Scripts\Elements.xml" />
     <ElementFile Location="Scripts\App.js" />
     <ElementFile Location="Scripts\jquery-1.9.1.min.map" />
@@ -12,6 +13,7 @@
     <ElementFile Location="Scripts\knockout-3.1.0.js" />
     <ElementFile Location="Scripts\repositories.js" />
     <ElementFile Location="Scripts\utils.js" />
+    <ElementFile Location="Scripts\ProductEdit.js" />
     <ElementManifest Location="Content\Elements.xml" />
     <ElementFile Location="Content\App.css" />
     <ElementManifest Location="Images\Elements.xml" />

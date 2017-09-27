@@ -44,6 +44,7 @@
                 <th>Unit Price</th>
                 <th>In Stock</th>
                 <th>On Order</th>
+                <th></th>
                 </thead>
                 <tbody data-bind="foreach: products">
                     <tr>
@@ -52,6 +53,9 @@
                         <td data-bind="text: UnitPrice"></td>
                         <td data-bind="text: UnitsInStock"></td>
                         <td data-bind="text: UnitsOnOrder"></td>
+                        <td>
+                            <a class="ms-Link editButton" data-bind="click: editProduct">Edit</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
