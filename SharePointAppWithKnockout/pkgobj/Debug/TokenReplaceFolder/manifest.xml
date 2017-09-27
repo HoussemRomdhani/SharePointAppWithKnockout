@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="abfbd00f-3159-433e-81f2-d1303ccf6cb4" SharePointProductVersion="16.0">
+  <FeatureManifests>
+    <FeatureManifest Location="SharePointAppWithKnockout_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

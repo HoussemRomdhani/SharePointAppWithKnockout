@@ -1,0 +1,3 @@
+C:\Users\houssem.r\Desktop\office365\SharePointAppWithKnockout\SharePointAppWithKnockout\bin\Debug\SharePointAppWithKnockout.pdb
+C:\Users\houssem.r\Desktop\office365\SharePointAppWithKnockout\SharePointAppWithKnockout\obj\Debug\SharePointAppWithKnockout.dll
+C:\Users\houssem.r\Desktop\office365\SharePointAppWithKnockout\SharePointAppWithKnockout\obj\Debug\SharePointAppWithKnockout.pdb

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="abfbd00f-3159-433e-81f2-d1303ccf6cb4" 
+        solutionId="abfbd00f-3159-433e-81f2-d1303ccf6cb4" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SharePointAppWithKnockout"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="19106d5a-d00c-4160-adb8-78ff4b680933" />
+  </features>
+</package>
