@@ -1,31 +1,49 @@
-﻿'use strict';
+﻿(function () {
+    "use strict";
 
-ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
+    var appUrl = GetUrlKeyValue("SPAppWebUrl");
+    var hostUrl = GetUrlKeyValue("SPHostUrl");
+    var repo = new XYZ.Repositories.ProductRepository(appUrl, hostUrl);
 
-function initializePage()
-{
-    var context = SP.ClientContext.get_current();
-    var user = context.get_web().get_currentUser();
+    jQuery(document).ready(function () {
+        var call = repo.getProducts("Id desc", 15);
+        call.done(function (data, textStatus, jqXHR) {
+            var viewModel = getViewModel(data.d.results);
+            ko.applyBindings(viewModel);
 
-    // This code runs when the DOM is ready and creates a context object which is needed to use the SharePoint object model
-    $(document).ready(function () {
-        getUserName();
+            var container = jQuery("#productsContainer");
+            container.show();
+        });
+        call.fail(failHandler);
     });
 
-    // This function prepares, loads, and then executes a SharePoint query to get the current users information
-    function getUserName() {
-        context.load(user);
-        context.executeQueryAsync(onGetUserNameSuccess, onGetUserNameFail);
+    function getViewModel(products) {
+        var viewModel = {};
+        viewModel.products = [];
+        jQuery.each(products, function (index, value) {
+            var product = {
+                Id: value.Id,
+                Title: value.Title,
+                CategoryTitle: value.Category.Title,
+                UnitPrice: String.format("${0:N2}", value.UnitPrice),
+                UnitsInStock: value.UnitsInStock,
+                UnitsOnOrder: value.UnitsOnOrder
+            }
+            viewModel.products.push(product);
+        });
+
+        return viewModel;
     }
 
-    // This function is executed if the above call is successful
-    // It replaces the contents of the 'message' element with the user name
-    function onGetUserNameSuccess() {
-        $('#message').text('Hello ' + user.get_title());
+    function failHandler(jqXHR, textStatus, errorThrown) {
+        var response = "";
+        try {
+            var parsed = JSON.parse(jqXHR.responseText);
+            response = parsed.error.message.value;
+        } catch (e) {
+            response = jqXHR.responseText;
+        }
+        alert("Call failed. Error: " + response);
     }
 
-    // This function is executed if the above call fails
-    function onGetUserNameFail(sender, args) {
-        alert('Failed to get user name. Error:' + args.get_message());
-    }
-}
+})();

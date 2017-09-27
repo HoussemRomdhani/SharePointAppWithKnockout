@@ -16,6 +16,10 @@
     <script type="text/javascript" src="../Scripts/utils.js"></script>
     <meta name="WebPartPageExpansion" content="full" />
 
+    <!-- Office UI Fabric -->
+    <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/2.2.0/fabric.min.css" />
+    <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/2.2.0/fabric.components.min.css" />
+
     <!-- Add your CSS styles to the following file -->
     <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
 
@@ -30,10 +34,11 @@
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
+
     <div>
-        <div id="productsContainer" style="display:none">
+        <div id="productsContainer" class="ms-font-l" style="display:none">
             <table border="1" cellspacing="0" cellpadding="5" width="95%">
-                <thead style="background-color: gray; color: white">
+                <thead class="ms-bgColor-themeSecondary ms-fontColor-white">
                 <th>Name</th>
                 <th>Category</th>
                 <th>Unit Price</th>
