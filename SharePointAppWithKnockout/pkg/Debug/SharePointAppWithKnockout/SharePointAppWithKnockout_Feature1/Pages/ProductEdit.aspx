@@ -29,15 +29,72 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Browse Products
+    Edit Product
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 
-    <div class="ms-font-l">
-        <p id="message">
-        </p>
+    <div>
+        <div id="productContainer" style="display:none">
+            <table class="ms-font-l ms-bgColor-themeLighter" cellspacing="0" cellpadding="15">
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>
+                            <input data-bind="value: Title" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                        <td>
+                            <span data-bind="text: CategoryTitle" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quantity Per Unit</td>
+                        <td>
+                            <input data-bind="value: QuantityPerUnit" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Unit Price</td>
+                        <td>
+                            <input data-bind="value: UnitPrice" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Units in Stock</td>
+                        <td>
+                            <input data-bind="value: UnitsInStock" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Units on Order</td>
+                        <td>
+                            <input data-bind="value: UnitsOnOrder" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reorder Level</td>
+                        <td>
+                            <input data-bind="value: ReorderLevel" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <button type="button" class="ms-Button" data-bind="click: saveProduct">
+                                <span class="ms-Button-label">Save</span>
+                            </button>
+                            <button type="button" class="ms-Button" data-bind="click: cancel">
+                                <span class="ms-Button-label">Cancel</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+
 
 </asp:Content>
